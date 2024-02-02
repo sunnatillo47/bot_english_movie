@@ -32,7 +32,7 @@ async def movie_get_caption(message: types.Message, state: FSMContext):
     mov_caption = message.text
     await state.update_data(mov_cap = mov_caption)
     
-    await message.answer("Yuqoridagi kinoga berilgan kodni tasdiqlang☝️")
+    await message.answer("Yuqoridagi kinoga berilgan kodni tasdiqlang☝️.")
     await state.set_state("mov_id")
 
 @dp.message_handler(state = "mov_id")
