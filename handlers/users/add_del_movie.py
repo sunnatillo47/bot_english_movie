@@ -60,6 +60,8 @@ async def mov_id(message: types.Message, state: FSMContext):
 
     await state.finish()
 
+
+
 @dp.callback_query_handler(text="del_movie")
 async def del_movie(call: CallbackQuery, state: FSMContext):
         await call.message.answer("<b>O'chirmoqchi bo'lgan kino idsini yuboring!</b>")
