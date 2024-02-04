@@ -49,9 +49,7 @@ async def get_id(message: types.Message, state: FSMContext):
     
 @dp.callback_query_handler(text=["like", "dislike"])
 async def process_etn_callback(query: types.CallbackQuery):
-    # num = int(query.message.caption.split("\n")[0])
     movie_id = int(re.search(r'\d+', query.message.caption).group())
-    # await message.answer(num)
     user_id = query.from_user.id
     callback_data = query.data
 
